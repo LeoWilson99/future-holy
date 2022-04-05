@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/_next/static/css/2f321e868ab8f6ccf65d.css" data-n-g=""> -->
+    <title>Holy Spiritz - The Worlds Best Drink Finder</title>
+
+
+    <!-- Lovely font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+      html {
+        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+    </style>
+  </head>
+
+
+
+
+  <!-- This is the main menu, should always be shown. -->
+  <section id="main">
+
+  <body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed" style="background-image: url('./assets/images/header.png');">
+
+    <!-- Logo section -->
+  <section>
+    <img src="./assets/images/HOLY_SPIRITZ.png" alt="logo" class="mx-auto animate-pulse logo zoom">
+    </section>
+
+
+      <!--Main-->
+      <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center" style="padding-top: 30px;margin-right: 0px;">
+        <!--Left Col-->
+        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+          <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">Get
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">More Intimate </span>with your drink.</h1>
+          <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
+            Want to know more about your Martini? Search below to find out more.
+          </p>
+
+          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+              <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                input type="text"
+                id="userSearch" 
+                name="hero-field"
+                placeholder="Martini, Rum, Vodka?"
+              />
+            </div>
+            <div class="tags">
+              <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-green-200 uppercase last:mr-0 mr-1">
+                <button id="clear-button">CLEAR</button>
+              </span>
+              <span id="drink-list1" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span id="drink-list2" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span id="drink-list3" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span  id="drink-list4" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span id="drink-list5" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span id="drink-list6" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+              <span id="drink-list7" class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 uppercase last:mr-0 mr-1">
+                pink
+              </span>
+            </div>
+            <div class="flex items-center justify-between pt-4">
+              <a href="#drinkarea"><button id="cheers" class="inline-flex text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg zoom">Cheers!</button></a>
+              <a href="#drinkarea"><button  id="feelingLucky" class="md: lg: ml-3 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg zoom">I'm feeling lucky!</button></a>
+            </div>
+          </form>
+        </div>
+
+        <!--Right Col-->
+        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
+          <img width="300" class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="./assets/images/placeholder_drink.png" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="Results">
+
+          <!--Main-->
+          <div id="drinkarea" class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center" style="padding-top: 30px;margin-right: 0px;">
+            <!--Left Col-->
+            <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+            <div class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+              <h1 id="randomName" class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white"></h1>
+              <h2 class="text-white text-lg title-font font-medium mb-3">Ingredients</h2>
+              <br>
+              <h2 id='ingredients1' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients2' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients3' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients4' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients5' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients6' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients7' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients8' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients9' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients10' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients11' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients12' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients13' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients14' class="leading-relaxed text-base"></h2>
+              <h2 id='ingredients15' class="leading-relaxed text-base"></h2>
+              
+      
+              <br>
+              <h2 class="text-white text-lg title-font font-medium mb-3">Instructions</h2>
+              <br>
+              <p id="instructions" class="leading-relaxed text-base"></p>
+              <br>
+              <h2 id='glassType' class="leading-relaxed text-base"></h2>
+            </div>
+            </div>
+    
+            <!--Right Col-->
+            <div class="w-full xl:w-3/5 p-12 overflow-hidden">
+              <img width="300" img alt="feature" id="gif" src="" class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6"/>
+            </div>
+    
+          </div>
+        </div>
+
+
+   </section>
+
+
+   <script src="./assets/js/script.js"></script>
+  </body>
+  
+</html>
+
+
+
